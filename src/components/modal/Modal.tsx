@@ -62,9 +62,7 @@ function Modal({
             queryClient.invalidateQueries({
               predicate: (query) => {
                 const key = query.queryKey?.[0];
-                return (
-                  key === 'myPosts' || key === 'posts' || key === 'myComments'
-                );
+                return key === 'myPosts' || key === 'posts';
               },
             });
             if (isAlbatalkDetail) {
